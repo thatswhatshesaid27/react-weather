@@ -1,68 +1,163 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* General styles */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
+  padding: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Main container */
+.container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-button {
+/* Search Bar */
+.search-container {
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 90%;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #007bff;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
+  text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 50vh; /* Takes half of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.display-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 100%; 
+  object-fit: contain;
+}
+
+/* Data overlay on image */
+.image-overlay2 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.image-overlay2 .name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffff;
+  text-transform: uppercase;
+}
+
+.image-overlay2 .degree {
+  font-size: 16px;
+  font-weight: normal;
+  color: #f0f0f0;
+}
+
+.image-overlay2 .situation {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #dcdcdc;
+}
+
+/* Button Container */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Buttons */
+.image-button {
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-button:hover {
+  transform: scale(1.05);
+}
+
+/* Different button colors */
+.button-0 { background-color: #711ebe; }
+.button-1 { background-color: #34a6d0; }
+.button-2 { background-color: #e0369f; }
+.button-3 { background-color: #d99329; }
+.button-4 { background-color: #ff5733; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 5px;
   }
-  a:hover {
-    color: #747bff;
+  .search-input {
+    width: 80%;
   }
-  button {
-    background-color: #f9f9f9;
+  .image-container {
+    height: 40vh;
   }
+  .image-overlay2 {
+    bottom: 5%;
+    padding: 8px;
+  }
+  .image-overlay2 .name { font-size: 20px; }
+  .image-overlay2 .degree { font-size: 14px; }
+  .image-overlay2 .situation { font-size: 12px; }
+  .image-button {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    height: 30vh;
+  }
+  .image-overlay2 {
+    bottom: 3%;
+  }
+  .image-overlay2 .name { font-size: 18px; }
+  .image-overlay2 .degree { font-size: 12px; }
+  .image-overlay2 .situation { font-size: 10px; }
 }
