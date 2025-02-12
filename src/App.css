@@ -1,0 +1,312 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+.container {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Search Bar */
+.search-container {
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100vh;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Takes half of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Data overlay on image */
+
+
+
+.image-overlay2 {
+  position: absolute;
+  bottom: 40px;
+  left: 10%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.0);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  gap: 5px; /* Adjust gap between items */
+  font-weight: bold;
+}
+
+.image-overlay2 p {
+  margin: 0;
+}
+
+.image-overlay2 .name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00ffff; /* Cyan */
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 5px #00ffff, 
+    0 0 10px #00b3b3, 
+    0 0 15px rgba(0, 255, 255, 0.8);
+}
+.image-overlay2 .degree {
+  font-size: 15px; /* Medium */
+  font-weight: normal;
+  color: #f0f0f0;
+  text-shadow: 
+    -1px -1px 1px #666, 
+    2px 2px 2px #333, 
+    3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.image-overlay2 .situation {
+  font-size: 10px; /* Smallest */
+  font-weight: lighter;
+  color: #dcdcdc;
+  text-shadow: 
+    -1px -1px 1px #444, 
+    1px 1px 1px #222, 
+    2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Button Container */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Buttons - Bigger & Colorful */
+.image-button {
+  padding: 30px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-button:hover {
+  transform: scale(1.1);
+}
+
+/* Different colors for buttons */
+.button-0 {
+  background-color: #711ebe;
+}
+
+.button-1 {
+  background-color: #34a6d0;
+}
+
+.button-2 {
+  background-color: #e0369f;
+}
+
+.button-3 {
+  background-color: #d99329;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Search Bar */
+.search-container {
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100vh;
+  max-width: 300px;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 50vh; /* Image captures exactly half the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.0);
+}
+
+/* Data overlay on image */
+.image-overlay p{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(117, 62, 62, 0);
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Weather information - Vertical alignment */
+.image-overlay2 {
+  position: absolute;
+  bottom: 40px;
+  left: 15%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.0);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  gap: 5px; /* Adjust gap between items */
+  font-weight: bold;
+}
+
+.image-overlay2 p {
+  margin: 0;
+}
+
+.image-overlay2 .name {
+  font-size: 25px; /* Largest */
+  font-weight: bold;
+  color: rgb(19, 18, 18);
+}
+
+.image-overlay2 .degree {
+  font-size: 18px; /* Medium */
+  font-weight: 600;
+}
+
+.image-overlay2 .situation {
+  font-size: 15px; /* Smallest */
+  font-weight: lighter;
+  font-style: italic;
+}
+
+/* Button Container */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Buttons - Bigger & Colorful */
+.image-button {
+  padding: 30px 40px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+;
+}
+
+.image-button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Different colors for buttons */
+.button-0 {
+  background-color: #711ebe;
+}
+
+.button-1 {
+  background-color: #34a6d0;
+}
+
+.button-2 {
+  background-color: #e0369f;
+}
+
+.button-3 {
+  background-color: #d99329;
+}
+
+.button-4 {
+  background-color: #ff5733;
+}
